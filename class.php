@@ -250,5 +250,3 @@ class dfSaleOrder extends CBitrixComponent
 		$this->includeComponentTemplate();
 	}
 }
-
-// Джигурда
