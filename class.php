@@ -34,8 +34,6 @@ class dfSaleOrder extends CBitrixComponent
 		$basket = Sale\Basket::loadItemsForFUser(Sale\Fuser::getId(), Bitrix\Main\Context::getCurrent()->getSite());
 		if ($item = $basket->getItemById($id)) {
 			$item->setField('QUANTITY', $quantity);
-			
-			
 			$item->save();
 		}
 	}
