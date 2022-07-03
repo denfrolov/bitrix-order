@@ -1,4 +1,4 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use
 	Bitrix\Main\Localization\Loc,
@@ -34,6 +34,8 @@ class dfSaleOrder extends CBitrixComponent
 		$basket = Sale\Basket::loadItemsForFUser(Sale\Fuser::getId(), Bitrix\Main\Context::getCurrent()->getSite());
 		if ($item = $basket->getItemById($id)) {
 			$item->setField('QUANTITY', $quantity);
+			
+			
 			$item->save();
 		}
 	}
@@ -179,7 +181,7 @@ class dfSaleOrder extends CBitrixComponent
 				if ($p['TYPE'] == 'FILE') {
 					$fileArray = array(
 						'name' => $_FILES['PROPERTIES']['name'][$p['CODE']],
-						'size' =>  $_FILES['PROPERTIES']['size'][$p['CODE']],
+						'size' => $_FILES['PROPERTIES']['size'][$p['CODE']],
 						'tmp_name' => $_FILES['PROPERTIES']['tmp_name'][$p['CODE']],
 						'type' => $_FILES['PROPERTIES']['type'][$p['CODE']],
 					);
