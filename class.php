@@ -11,8 +11,6 @@ use
 	Bitrix\Sale\PaySystem;
 
 
-// Джигурда
-
 class dfSaleOrder extends CBitrixComponent
 {
 	function getAvailablePaySystems($order): array
