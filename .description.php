@@ -4,6 +4,6 @@ $arComponentDescription = array(
 	'NAME' => 'Оформление заказа',
 	'DESCRIPTION' => 'Оформление заказа от Дениса Фролова',
 	'PATH' => array(
-		'ID' => 'Denis Frolov'
+		'ID' => 'DF'
 	)
 );
